@@ -39,7 +39,7 @@ npm run dev
 
 A aplicação ficará disponível em `http://localhost:3000`.
 
-## Build de produção
+## Build de produção (servidor Node.js)
 
 ```bash
 npm run build
@@ -47,6 +47,42 @@ npm run serve:ssr:app
 ```
 
 O servidor SSR sobe na porta definida pela variável `PORT` (padrão: `4000`).
+
+## Deploy no Vercel
+
+### Arquivos de configuração
+
+| Arquivo | Descrição |
+|---|---|
+| `vercel.json` | Build command, região (`gru1` / São Paulo) e roteamento |
+| `vercel-entry.mjs` | Adaptador que expõe o servidor Express como função serverless |
+| `.vercelignore` | Arquivos excluídos do upload |
+
+### Via Vercel CLI
+
+```bash
+npm i -g vercel
+vercel deploy
+```
+
+### Via GitHub / GitLab (recomendado)
+
+1. Faça push do repositório
+2. Importe o projeto em [vercel.com/new](https://vercel.com/new)
+3. O Vercel detecta automaticamente as configurações do `vercel.json`
+4. Não altere nenhuma configuração de build — elas já estão no `vercel.json`
+
+### Variáveis de ambiente
+
+Configure as variáveis abaixo em **Settings → Environment Variables** no painel do Vercel:
+
+| Variável | Descrição |
+|---|---|
+| `RESEND_API_KEY` | Chave do Resend para envio de email do formulário |
+| `RESEND_FROM_EMAIL` | Endereço remetente (domínio precisa estar verificado no Resend) |
+| `CONTACT_EMAIL` | Email de destino dos orçamentos |
+
+> Durante testes, use `RESEND_FROM_EMAIL=onboarding@resend.dev` (domínio de sandbox do Resend, não precisa de verificação).
 
 ## Estrutura
 

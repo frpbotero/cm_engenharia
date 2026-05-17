@@ -1,6 +1,9 @@
 {
-  "name": "ai-studio-angular-app",
-  "version": "0.0.0",
+  "name": "cm-engenharia-landing",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

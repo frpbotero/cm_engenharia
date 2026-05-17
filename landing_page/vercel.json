@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": null,
+  "regions": ["gru1"],
+  "functions": {
+    "vercel-entry.mjs": {
+      "runtime": "@vercel/node",
+      "includeFiles": "dist/app/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/vercel-entry.mjs"
+    }
+  ]
+}
