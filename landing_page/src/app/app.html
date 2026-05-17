@@ -1,0 +1,520 @@
+<div class="bg-background text-on-background font-body-md text-body-md antialiased pt-20">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm h-20 transition-all duration-300">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full max-w-container-max mx-auto">
+    <div class="font-display-lg text-headline-md tracking-tighter text-primary">
+      CM ENGENHARIA
+    </div>
+    <div class="hidden md:flex gap-gutter h-full items-center">
+      <a class="flex items-center h-full font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary transition-colors duration-200" href="#servicos">Serviços</a>
+      <a class="flex items-center h-full font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary transition-colors duration-200" href="#diferenciais">Diferenciais</a>
+      <a class="flex items-center h-full font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary transition-colors duration-200" href="#portfolio">Portfólio</a>
+      <a class="flex items-center h-full font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary transition-colors duration-200" href="#contato">Contato</a>
+    </div>
+    <a class="hidden md:flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded hover:bg-surface-tint transition-colors" href="#contato">
+      SOLICITAR ORÇAMENTO
+    </a>
+    <button class="md:hidden text-primary" (click)="toggleMobileMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  @if (isMobileMenuOpen()) {
+    <div class="md:hidden bg-surface-container-lowest border-b border-outline-variant absolute top-20 left-0 w-full flex flex-col px-margin-mobile py-4 shadow-sm z-40">
+      <a class="py-3 font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary" href="#servicos" (click)="toggleMobileMenu()">Serviços</a>
+      <a class="py-3 font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary" href="#diferenciais" (click)="toggleMobileMenu()">Diferenciais</a>
+      <a class="py-3 font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary" href="#portfolio" (click)="toggleMobileMenu()">Portfólio</a>
+      <a class="py-3 font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary" href="#contato" (click)="toggleMobileMenu()">Contato</a>
+      <a class="mt-4 flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded" href="#contato" (click)="toggleMobileMenu()">SOLICITAR ORÇAMENTO</a>
+    </div>
+  }
+</nav>
+
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center bg-surface-container-lowest overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img alt="CM Engenharia Construction Site" class="w-full h-full object-cover object-center opacity-90" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPoGwmjCNYMnLwhj4OPdbxbedSYvtKrnxpziW4MAyd080LEx9LoI5xGF-QVhHcw-pCik7nxoFXEQevRBWH1OINjBez0wdbSjMX-biH2rmK6KF4yaz9EqFm9dpoQVuKmgiyNDPYFAWG9tYivZEWL80_nIeetbV_aNk3PGCjKXC97gutqK8q6UtxpdEFkvCt_ND8IqxRA5hk43Bnf3gXO2dtih45TDkVYs1FTtHk36fimA0jjPGReDhGoi-9EaKQihgrEtY01-zwY5qI" />
+    <div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/80 to-transparent"></div>
+  </div>
+  <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+    <div class="max-w-2xl">
+      <h1 class="font-display-lg text-display-lg text-primary mb-6">
+        Construção comercial com velocidade, qualidade e foco em resultado.
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+        A CM Engenharia desenvolve lojas, quiosques e obras para franquias com experiência em diferentes sistemas construtivos e atuação em várias regiões do Brasil.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a class="inline-flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-8 py-4 rounded shadow-[0px_4px_6px_-1px_rgba(15,23,42,0.1)] hover:bg-tertiary-fixed-dim transition-colors" href="#contato">
+          Solicitar orçamento
+        </a>
+        <a class="inline-flex items-center justify-center bg-surface-container-low border border-outline-variant text-primary font-label-md text-label-md px-8 py-4 rounded hover:bg-surface transition-colors" href="#portfolio">
+          Ver projetos
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-section-gap bg-surface">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid md:grid-cols-2 gap-gutter items-center">
+      <div>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Excelência em Varejo e Franquias</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+          Somos especialistas na materialização de projetos comerciais, entendendo as nuances e a necessidade de agilidade que o varejo exige. Nossa engenharia de precisão garante entregas no prazo, fundamentais para a operação de lojas e franquias.
+        </p>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+          Com presença estratégica e obras realizadas em <strong>Manaus, São Paulo, Rio de Janeiro e Bahia</strong>, a CM Engenharia possui a logística e a expertise necessárias para padronizar e executar seu projeto com a mesma qualidade em diferentes localidades do país.
+        </p>
+        <div class="flex items-center flex-wrap gap-4 mt-8">
+          <div class="flex items-center gap-2">
+            <mat-icon class="text-primary icon-filled">location_on</mat-icon>
+            <span class="font-label-md text-label-md text-on-surface">Manaus</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <mat-icon class="text-primary icon-filled">location_on</mat-icon>
+            <span class="font-label-md text-label-md text-on-surface">São Paulo</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <mat-icon class="text-primary icon-filled">location_on</mat-icon>
+            <span class="font-label-md text-label-md text-on-surface">Rio de Janeiro</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <mat-icon class="text-primary icon-filled">location_on</mat-icon>
+            <span class="font-label-md text-label-md text-on-surface">Bahia</span>
+          </div>
+        </div>
+      </div>
+      <div class="h-96 bg-surface-container rounded border border-outline-variant overflow-hidden relative">
+        <img alt="Commercial Interior Construction" class="w-full h-full object-cover" referrerpolicy="no-referrer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJJr91Cd_p1qz_Nm8AFiPBwzRncPk8oMM-wNGgZCuRHUmvIvyXWBV2SKmYarIY6JSQm_CMtL02zqoyT2hI5eBTKvNhBI6RaS0NZuyfFViCdw5tJNqrTxfKOi0ZV0-ArvmyLtb5KTV2jRhy0z8q08SlYwA4-zQZu919I77_X2bQA2BOwYexL4QMOGr0rGMGahbT6y5FlT_ZNiWtOROIYUSfRPXBHQYMkpgWmzc-fVrd5WleFQbnRrSGx5eCxygmMUfTPDLQXRprgMRt" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Differentials -->
+<section class="py-section-gap bg-surface-container-lowest" id="diferenciais">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-12">
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Nossos Diferenciais</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Engenharia estruturada para atender as demandas mais exigentes do mercado comercial.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      <!-- Card 1 -->
+      <div class="p-6 border border-outline-variant rounded bg-surface hover:bg-surface-container-low transition-colors duration-200">
+        <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-10 !h-10 text-[40px]">speed</mat-icon>
+        <h3 class="font-headline-md text-headline-md text-primary mb-2">Velocidade &amp; Organização</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Cronogramas rigorosos e gestão de obra otimizada para garantir a inauguração na data prevista.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="p-6 border border-outline-variant rounded bg-surface hover:bg-surface-container-low transition-colors duration-200">
+        <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-10 !h-10 text-[40px]">verified</mat-icon>
+        <h3 class="font-headline-md text-headline-md text-primary mb-2">Padrões de Qualidade</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Acabamento impecável e respeito estrito aos manuais de marca e especificações técnicas.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="p-6 border border-outline-variant rounded bg-surface hover:bg-surface-container-low transition-colors duration-200">
+        <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-10 !h-10 text-[40px]">storefront</mat-icon>
+        <h3 class="font-headline-md text-headline-md text-primary mb-2">Expertise em Franquias</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Profundo conhecimento das particularidades e exigências da construção para redes de varejo.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="p-6 border border-outline-variant rounded bg-surface hover:bg-surface-container-low transition-colors duration-200">
+        <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-10 !h-10 text-[40px]">architecture</mat-icon>
+        <h3 class="font-headline-md text-headline-md text-primary mb-2">Sistemas Diversos</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Domínio em Container, Steel Frame e Alvenaria, adequando a solução ideal para cada projeto.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="p-6 border border-outline-variant rounded bg-surface hover:bg-surface-container-low transition-colors duration-200">
+        <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-10 !h-10 text-[40px]">support_agent</mat-icon>
+        <h3 class="font-headline-md text-headline-md text-primary mb-2">Atendimento Consultivo</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Acompanhamento próximo, relatórios transparentes e comunicação clara em todas as etapas.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="p-6 border border-outline-variant rounded bg-surface hover:bg-surface-container-low transition-colors duration-200">
+        <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-10 !h-10 text-[40px]">public</mat-icon>
+        <h3 class="font-headline-md text-headline-md text-primary mb-2">Presença Nacional</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Capacidade logística para executar e padronizar obras em diferentes estados do Brasil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-section-gap bg-primary-container text-on-primary" id="servicos">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="flex flex-col md:flex-row gap-12 items-start">
+      <div class="md:w-1/3 md:sticky md:top-24">
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 text-on-primary">Soluções Construtivas</h2>
+        <p class="font-body-lg text-body-lg text-on-primary-container mb-8">Atuamos em diversas frentes do varejo, dominando as tecnologias necessárias para viabilizar seu modelo de negócio com eficiência.</p>
+        <a class="inline-flex items-center gap-2 text-tertiary-fixed-dim hover:text-tertiary-fixed font-label-md text-label-md transition-colors" href="#contato">
+          Traga seu projeto <mat-icon class="text-sm w-4 h-4 text-[16px] leading-[16px]">arrow_forward</mat-icon>
+        </a>
+      </div>
+      <div class="md:w-2/3 grid sm:grid-cols-2 gap-6 w-full">
+        <div class="border border-on-primary-fixed-variant p-6 rounded bg-on-primary-fixed hover:bg-[#1a233a] transition-colors">
+          <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-8 !h-8 text-[32px]">store</mat-icon>
+          <h4 class="font-headline-md text-headline-md text-on-primary mb-2">Lojas</h4>
+          <p class="font-body-md text-body-md text-on-primary-container">Construção completa de espaços comerciais, de rua a shopping centers, com alto rigor de acabamento.</p>
+        </div>
+        <div class="border border-on-primary-fixed-variant p-6 rounded bg-on-primary-fixed hover:bg-[#1a233a] transition-colors">
+          <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-8 !h-8 text-[32px]">business</mat-icon>
+          <h4 class="font-headline-md text-headline-md text-on-primary mb-2">Quiosques</h4>
+          <p class="font-body-md text-body-md text-on-primary-container">Montagem ágil e precisa de quiosques para shoppings e áreas de grande circulação.</p>
+        </div>
+        <div class="border border-on-primary-fixed-variant p-6 rounded bg-on-primary-fixed hover:bg-[#1a233a] transition-colors">
+          <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-8 !h-8 text-[32px]">storefront</mat-icon>
+          <h4 class="font-headline-md text-headline-md text-on-primary mb-2">Franquias</h4>
+          <p class="font-body-md text-body-md text-on-primary-container">Padronização absoluta. Execução rigorosa dos cadernos de encargos das franqueadoras.</p>
+        </div>
+        <div class="border border-on-primary-fixed-variant p-6 rounded bg-on-primary-fixed hover:bg-[#1a233a] transition-colors">
+          <mat-icon class="text-tertiary-fixed-dim block mb-4 !w-8 !h-8 text-[32px]">handyman</mat-icon>
+          <h4 class="font-headline-md text-headline-md text-on-primary mb-2">Reformas</h4>
+          <p class="font-body-md text-body-md text-on-primary-container">Retrofit e atualização de espaços comerciais com mínimo impacto na operação.</p>
+        </div>
+        <div class="sm:col-span-2 border border-on-primary-fixed-variant p-6 rounded bg-gradient-to-br from-on-primary-fixed to-primary-container text-on-primary">
+          <h4 class="font-headline-md text-headline-md mb-4 text-tertiary-fixed-dim">Sistemas Construtivos Avançados</h4>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <strong class="block font-label-md text-label-md mb-1 text-on-primary">Container</strong>
+              <p class="font-body-md text-body-md text-on-primary-container">Sustentabilidade e mobilidade para projetos inovadores.</p>
+            </div>
+            <div>
+              <strong class="block font-label-md text-label-md mb-1 text-on-primary">Steel Frame</strong>
+              <p class="font-body-md text-body-md text-on-primary-container">Rapidez de execução e precisão milimétrica nas medidas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="py-section-gap bg-surface" id="portfolio">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-12">
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Nosso Portfólio</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Confira alguns dos projetos comerciais de sucesso executados pela CM Engenharia em todo o Brasil.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      <!-- Project 1 -->
+      <div class="group border border-outline-variant rounded bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-md">
+        <div class="h-60 overflow-hidden relative">
+          <img alt="Projeto Comercial 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-surface-container rounded-full font-caption text-caption text-on-surface-variant mb-3">Loja de Shopping</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-2">Franquia Fast Food Premium</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+            <mat-icon class="text-[18px] w-[18px] h-[18px] text-tertiary-fixed-dim">location_on</mat-icon>
+            São Paulo, SP
+          </p>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="group border border-outline-variant rounded bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-md">
+        <div class="h-60 overflow-hidden relative">
+          <img alt="Projeto Comercial 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1620188467120-50429dcecbcc?q=80&w=1964&auto=format&fit=crop" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-surface-container rounded-full font-caption text-caption text-on-surface-variant mb-3">Loja de Rua</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-2">Flagship Store Beleza</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+            <mat-icon class="text-[18px] w-[18px] h-[18px] text-tertiary-fixed-dim">location_on</mat-icon>
+            Rio de Janeiro, RJ
+          </p>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="group border border-outline-variant rounded bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-md">
+        <div class="h-60 overflow-hidden relative">
+          <img alt="Projeto Comercial 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?q=80&w=1974&auto=format&fit=crop" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-surface-container rounded-full font-caption text-caption text-on-surface-variant mb-3">Quiosque</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-2">Quiosque Café Especial</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+            <mat-icon class="text-[18px] w-[18px] h-[18px] text-tertiary-fixed-dim">location_on</mat-icon>
+            Manaus, AM
+          </p>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="group border border-outline-variant rounded bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-md">
+        <div class="h-60 overflow-hidden relative">
+          <img alt="Projeto Comercial 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-surface-container rounded-full font-caption text-caption text-on-surface-variant mb-3">Loja Sustentável</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-2">Boutique Eco-friendly</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+            <mat-icon class="text-[18px] w-[18px] h-[18px] text-tertiary-fixed-dim">location_on</mat-icon>
+            Salvador, BA
+          </p>
+        </div>
+      </div>
+      <!-- Project 5 -->
+      <div class="group border border-outline-variant rounded bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-md">
+        <div class="h-60 overflow-hidden relative">
+          <img alt="Projeto Comercial 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1629904851385-d729f23098e8?q=80&w=2066&auto=format&fit=crop" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-surface-container rounded-full font-caption text-caption text-on-surface-variant mb-3">Clínica</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-2">Clínica Odontológica</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+            <mat-icon class="text-[18px] w-[18px] h-[18px] text-tertiary-fixed-dim">location_on</mat-icon>
+            São Paulo, SP
+          </p>
+        </div>
+      </div>
+      <!-- Project 6 -->
+      <div class="group border border-outline-variant rounded bg-surface-container-lowest overflow-hidden transition-all duration-300 hover:shadow-md">
+        <div class="h-60 overflow-hidden relative">
+          <img alt="Projeto Comercial 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2070&auto=format&fit=crop" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-surface-container rounded-full font-caption text-caption text-on-surface-variant mb-3">Reforma</span>
+          <h3 class="font-headline-md text-headline-md text-primary mb-2">Retrofit Loja Vestuário</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+            <mat-icon class="text-[18px] w-[18px] h-[18px] text-tertiary-fixed-dim">location_on</mat-icon>
+            Campinas, SP
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 text-center">
+      <a class="inline-flex items-center justify-center bg-transparent border border-outline-variant text-primary font-label-md text-label-md px-8 py-4 rounded hover:bg-surface-container-low transition-colors" href="#contato">
+        Gostou? Solicite um orçamento
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="py-section-gap bg-surface-container-lowest border-b border-outline-variant">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary text-center mb-12">Método CM de Engenharia</h2>
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center relative">
+      <div class="hidden md:block absolute top-[28px] left-8 w-[calc(100%-64px)] h-[1px] bg-outline-variant -z-0"></div>
+      
+      <div class="flex flex-col md:items-center z-10 w-full md:w-auto relative mb-6 md:mb-0">
+        <div class="w-14 h-14 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center font-label-md text-label-md text-primary z-10 mb-2 shrink-0">1</div>
+        <span class="font-label-md text-label-md text-on-surface">Entendimento</span>
+        <div class="md:hidden absolute left-[27px] top-[56px] bottom-[-24px] w-[1px] bg-outline-variant z-0"></div>
+      </div>
+      
+      <div class="flex flex-col md:items-center z-10 w-full md:w-auto relative mb-6 md:mb-0">
+        <div class="w-14 h-14 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center font-label-md text-label-md text-primary z-10 mb-2 shrink-0">2</div>
+        <span class="font-label-md text-label-md text-on-surface">Análise</span>
+        <div class="md:hidden absolute left-[27px] top-[56px] bottom-[-24px] w-[1px] bg-outline-variant z-0"></div>
+      </div>
+
+      <div class="flex flex-col md:items-center z-10 w-full md:w-auto relative mb-6 md:mb-0">
+        <div class="w-14 h-14 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center font-label-md text-label-md text-primary z-10 mb-2 shrink-0">3</div>
+        <span class="font-label-md text-label-md text-on-surface">Orçamento</span>
+        <div class="md:hidden absolute left-[27px] top-[56px] bottom-[-24px] w-[1px] bg-outline-variant z-0"></div>
+      </div>
+
+      <div class="flex flex-col md:items-center z-10 w-full md:w-auto relative mb-6 md:mb-0">
+        <div class="w-14 h-14 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center font-label-md text-label-md text-primary z-10 mb-2 shrink-0">4</div>
+        <span class="font-label-md text-label-md text-on-surface">Planejamento</span>
+        <div class="md:hidden absolute left-[27px] top-[56px] bottom-[-24px] w-[1px] bg-outline-variant z-0"></div>
+      </div>
+
+      <div class="flex flex-col md:items-center z-10 w-full md:w-auto relative mb-6 md:mb-0">
+        <div class="w-14 h-14 rounded-full bg-tertiary-fixed-dim border-2 border-tertiary-fixed-dim flex items-center justify-center font-label-md text-label-md text-tertiary z-10 mb-2 shrink-0">5</div>
+        <span class="font-label-md text-label-md text-on-surface">Execução</span>
+        <div class="md:hidden absolute left-[27px] top-[56px] bottom-[-24px] w-[1px] bg-outline-variant z-0"></div>
+      </div>
+
+      <div class="flex flex-col md:items-center z-10 w-full md:w-auto relative">
+        <div class="w-14 h-14 rounded-full bg-primary border-2 border-primary flex items-center justify-center font-label-md text-label-md text-on-primary z-10 mb-2 shrink-0">
+          <mat-icon class="text-[24px] w-[24px] h-[24px]">check</mat-icon>
+        </div>
+        <span class="font-label-md text-label-md text-primary font-bold">Entrega</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lead Capture Form -->
+<section class="py-section-gap bg-surface" id="contato">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid md:grid-cols-2 gap-gutter">
+      <div>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Solicite uma Análise</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+          Seu projeto comercial precisa de uma empresa que una agilidade, qualidade e experiência. Fale com a CM Engenharia.
+        </p>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <mat-icon class="text-primary mt-1 icon-filled">email</mat-icon>
+            <div>
+              <span class="block font-label-md text-label-md text-on-surface">Email Comercial</span>
+              <span class="font-body-md text-body-md text-on-surface-variant">contato&#64;cmengenharia.com</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <mat-icon class="text-primary mt-1 icon-filled">phone</mat-icon>
+            <div>
+              <span class="block font-label-md text-label-md text-on-surface">Telefone / WhatsApp</span>
+              <span class="font-body-md text-body-md text-on-surface-variant">+55 (11) 99999-9999</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-8 border border-outline-variant rounded shadow-sm">
+
+        @if (submitStatus() === 'success') {
+          <div class="flex flex-col items-center justify-center text-center py-12 gap-4">
+            <div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center">
+              <mat-icon class="text-primary text-[40px] !w-10 !h-10 icon-filled">check_circle</mat-icon>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary">Mensagem enviada!</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Recebemos sua solicitação e entraremos em contato em breve.</p>
+            <button class="mt-4 font-label-md text-label-md text-primary underline underline-offset-2" type="button" (click)="submitStatus.set('idle')">Enviar outra mensagem</button>
+          </div>
+        } @else {
+          <form [formGroup]="contactForm" (ngSubmit)="submitContact()" class="space-y-4" novalidate>
+
+            @if (submitStatus() === 'error') {
+              <div class="flex items-center gap-3 p-4 bg-error-container rounded border border-on-error-container/20">
+                <mat-icon class="text-on-error-container text-[20px] !w-5 !h-5 shrink-0">error</mat-icon>
+                <p class="font-body-md text-body-md text-on-error-container">Não foi possível enviar. Tente novamente ou entre em contato por WhatsApp.</p>
+              </div>
+            }
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1 uppercase">Nome Completo <span class="text-error">*</span></label>
+                <input formControlName="name"
+                  class="w-full h-12 px-4 border rounded bg-surface focus:ring-1 font-body-md text-body-md outline-none transition-colors"
+                  [class.border-error]="isFieldInvalid('name')"
+                  [class.focus:border-error]="isFieldInvalid('name')"
+                  [class.border-outline-variant]="!isFieldInvalid('name')"
+                  [class.focus:border-primary]="!isFieldInvalid('name')"
+                  [class.focus:ring-primary]="!isFieldInvalid('name')"
+                  placeholder="Seu nome" type="text" />
+                @if (isFieldInvalid('name')) {
+                  <span class="font-caption text-caption text-error mt-1 block">Campo obrigatório</span>
+                }
+              </div>
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1 uppercase">Empresa / Franquia <span class="text-error">*</span></label>
+                <input formControlName="company"
+                  class="w-full h-12 px-4 border rounded bg-surface focus:ring-1 font-body-md text-body-md outline-none transition-colors"
+                  [class.border-error]="isFieldInvalid('company')"
+                  [class.border-outline-variant]="!isFieldInvalid('company')"
+                  [class.focus:border-primary]="!isFieldInvalid('company')"
+                  [class.focus:ring-primary]="!isFieldInvalid('company')"
+                  placeholder="Nome da empresa" type="text" />
+                @if (isFieldInvalid('company')) {
+                  <span class="font-caption text-caption text-error mt-1 block">Campo obrigatório</span>
+                }
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1 uppercase">WhatsApp <span class="text-error">*</span></label>
+                <input formControlName="whatsapp"
+                  class="w-full h-12 px-4 border rounded bg-surface focus:ring-1 font-body-md text-body-md outline-none transition-colors"
+                  [class.border-error]="isFieldInvalid('whatsapp')"
+                  [class.border-outline-variant]="!isFieldInvalid('whatsapp')"
+                  [class.focus:border-primary]="!isFieldInvalid('whatsapp')"
+                  [class.focus:ring-primary]="!isFieldInvalid('whatsapp')"
+                  placeholder="(00) 00000-0000" type="tel" />
+                @if (isFieldInvalid('whatsapp')) {
+                  <span class="font-caption text-caption text-error mt-1 block">Campo obrigatório</span>
+                }
+              </div>
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1 uppercase">Email <span class="text-error">*</span></label>
+                <input formControlName="email"
+                  class="w-full h-12 px-4 border rounded bg-surface focus:ring-1 font-body-md text-body-md outline-none transition-colors"
+                  [class.border-error]="isFieldInvalid('email')"
+                  [class.border-outline-variant]="!isFieldInvalid('email')"
+                  [class.focus:border-primary]="!isFieldInvalid('email')"
+                  [class.focus:ring-primary]="!isFieldInvalid('email')"
+                  placeholder="seu&#64;email.com" type="email" />
+                @if (isFieldInvalid('email')) {
+                  <span class="font-caption text-caption text-error mt-1 block">
+                    @if (contactForm.get('email')?.errors?.['required']) { Campo obrigatório }
+                    @else { Email inválido }
+                  </span>
+                }
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1 uppercase">Cidade / Estado</label>
+                <input formControlName="city"
+                  class="w-full h-12 px-4 border border-outline-variant rounded bg-surface focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md outline-none transition-colors"
+                  placeholder="Local da obra" type="text" />
+              </div>
+              <div>
+                <label class="block font-label-md text-label-md text-on-surface mb-1 uppercase">Tipo de Obra</label>
+                <select formControlName="type"
+                  class="w-full h-12 px-4 border border-outline-variant rounded bg-surface focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md outline-none transition-colors appearance-none">
+                  <option>Loja de Rua</option>
+                  <option>Loja de Shopping</option>
+                  <option>Quiosque</option>
+                  <option>Container</option>
+                  <option>Reforma</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-label-md text-label-md text-on-surface mb-1 uppercase">Mensagem / Detalhes</label>
+              <textarea formControlName="message"
+                class="w-full p-4 border border-outline-variant rounded bg-surface focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md h-32 resize-none outline-none transition-colors"
+                placeholder="Conte-nos um pouco sobre a necessidade do seu projeto..."></textarea>
+            </div>
+
+            <button
+              class="w-full bg-primary text-on-primary font-label-md text-label-md px-6 py-4 rounded hover:bg-surface-tint transition-colors flex justify-center items-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+              type="submit"
+              [disabled]="submitStatus() === 'sending'">
+              @if (submitStatus() === 'sending') {
+                <mat-icon class="animate-spin text-[20px] w-5 h-5">progress_activity</mat-icon>
+                ENVIANDO...
+              } @else {
+                SOLICITAR ORÇAMENTO
+                <mat-icon class="text-[20px] w-5 h-5 leading-5 inline-flex justify-center items-center pb-[2px]">arrow_forward</mat-icon>
+              }
+            </button>
+          </form>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Component -->
+<footer class="bg-primary-container w-full border-t border-on-primary-fixed-variant">
+  <div class="flex flex-col md:flex-row justify-between items-center py-6 px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto h-auto min-h-[80px]">
+    <div class="font-display-lg text-headline-md text-tertiary-fixed tracking-tighter">
+      CM ENGENHARIA
+    </div>
+    <div class="flex flex-wrap justify-center gap-4 md:gap-gutter mt-4 md:mt-0">
+      <a class="font-caption text-caption text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#">Termos de Uso</a>
+      <a class="font-caption text-caption text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#">Política de Privacidade</a>
+      <a class="font-caption text-caption text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#">Trabalhe Conosco</a>
+      <a class="font-caption text-caption text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#">FAQ</a>
+    </div>
+    <div class="font-caption text-caption text-on-primary-container text-center md:text-right mt-4 md:mt-0 opacity-70">
+      © {{ currentYear }} CM Engenharia. Todos os direitos reservados. Engenharia de Precisão e Solidez.
+    </div>
+  </div>
+</footer>
+</div>
