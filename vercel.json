@@ -6,7 +6,6 @@
   "regions": ["gru1"],
   "functions": {
     "vercel-entry.mjs": {
-      "runtime": "@vercel/node@3",
       "includeFiles": "dist/app/**"
     }
   },
