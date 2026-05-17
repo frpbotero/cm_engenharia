@@ -2,18 +2,16 @@
   "version": 2,
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "framework": null,
-  "regions": ["gru1"],
+  "framework": "angular",
   "functions": {
-    "vercel-entry.mjs": {
-      "runtime": "@vercel/node",
-      "includeFiles": "dist/app/**"
+    "dist/app/server/server.mjs": {
+      "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/vercel-entry.mjs"
+      "destination": "/dist/app/server/server.mjs"
     }
   ]
 }
