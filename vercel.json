@@ -5,14 +5,14 @@
   "framework": null,
   "regions": ["gru1"],
   "functions": {
-    "vercel-entry.mjs": {
+    "api/index.mjs": {
       "includeFiles": "dist/app/**"
     }
   },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/vercel-entry.mjs"
+      "destination": "/api/index"
     }
   ]
 }
